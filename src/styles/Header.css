@@ -1,0 +1,583 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 0;
+    margin: 0;
+}
+
+#root {
+    padding-top: 116px; /* Adjust for top-bar (36px) + header (80px) */
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+    background: #071233;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3000;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.top-bar-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center; /* center the email */
+}
+
+.top-bar-center i {
+    color: #1558b8;
+    font-size: 14px;
+}
+
+.top-bar-center a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.top-bar-center a:hover {
+    color: #1558b8;
+}
+
+.top-bar-right {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.top-bar-right a {
+    color: #fff;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar-right a:hover {
+    color: #1558b8;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    position: fixed;
+    top: 36px; /* sits below top-bar */
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2500;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    background: #ffffff;
+}
+
+/* =========================
+   NAV CONTAINER
+========================= */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    min-height: 80px; /* increased for larger logo and text */
+    width: 100%;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    color: #0b3b66;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    height: 80px; /* taller to match nav-container */
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 56px; /* larger logo */
+    height: 56px;
+    object-fit: contain;
+}
+
+/* Company name */
+.logo span strong {
+    font-family: "Gruppo", sans-serif;
+    font-size: 30px; /* larger company name */
+    font-weight: 700;
+    color: #0b3b66;
+    letter-spacing: 1px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* =========================
+   DESKTOP NAV
+========================= */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* right-align navigation */
+    padding: 0 12px;
+    gap: 24px;
+    height: 80px;
+    flex: 1;
+}
+
+.nav-list {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    align-items: center;
+    height: 80px;
+}
+
+.nav-list > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a {
+    color: #1a202c;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.24s ease;
+    position: relative;
+    padding: 10px 6px;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1558b8;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1558b8;
+    text-decoration: none;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   DROPDOWN (DESKTOP)
+========================= */
+.nav-item.dropdown {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.dropdown-toggle::after {
+    /* use a clear downward chevron arrow for dropdown links */
+    content: " \25BE"; /* ▼ */
+    display: inline-block;
+    font-size: 16px;
+    color: #1558b8;
+    margin-left: 6px;
+    vertical-align: middle;
+    line-height: 1;
+    transition: transform 0.18s ease;
+}
+
+.nav-item.dropdown:hover .dropdown-toggle::after {
+    transform: translateY(2px);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 240px;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.3s ease;
+    z-index: 3000;
+    margin-top: 0ch;
+    border-top: 8px solid transparent;
+    border: 1px solid rgba(0,0,0,0.05);
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 14px 18px;
+    display: block;
+    color: #2d3748;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu a:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-menu a:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f7ff;
+    color: #1558b8;
+    border-left-color: #1558b8;
+    padding-left: 22px;
+}
+
+/* MEGA MENU CONTAINER */
+.nav-item.mega-dropdown {
+    position: static !important; /* Required for full-width or centered mega menus */
+}
+
+.mega-menu-content {
+    left: 50% !important;
+    transform: translateX(-50%) translateY(20px) !important;
+    width: 600px; /* Adjust width as needed */
+    padding: 25px !important;
+    border-radius: 16px !important;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: none !important; /* Remove the scrollbar constraint */
+    overflow: visible !important;
+}
+
+.nav-item.mega-dropdown:hover .mega-menu-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) !important;
+}
+
+/* COLUMNS */
+.mega-col {
+    padding: 10px 20px;
+}
+
+.line-right {
+    border-right: 1px solid #f0f0f0;
+}
+
+.mega-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #1558b8;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+}
+
+/* ITEMS */
+.mega-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.mega-item i {
+    margin-right: 12px;
+    font-size: 18px;
+    color: #cbd5e0;
+    transition: color 0.2s ease;
+}
+
+.mega-item:hover {
+    background: #f0f7ff;
+    color: #1558b8;
+    padding-left: 18px;
+}
+
+.mega-item:hover i {
+    color: #1558b8;
+}
+
+/* MOBILE FIX */
+@media (max-width: 991px) {
+    .mega-menu-content {
+        position: relative !important;
+        width: 100% !important;
+        transform: none !important;
+        left: 0 !important;
+        box-shadow: none !important;
+        padding: 10px !important;
+        display: none; /* Let Bootstrap handle mobile toggle */
+    }
+    .line-right { border-right: none; }
+    .nav-item.mega-dropdown:hover .mega-menu-content {
+        display: block;
+    }
+}
+
+/* =========================
+   CONTACT BUTTON
+========================= */
+.btn-contact {
+    background: linear-gradient(135deg, #1558b8 0%, #0d3a7a 100%);
+    color: #ffffff !important;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 12px rgba(21, 88, 184, 0.25);
+}
+
+.btn-contact:hover {
+    background: linear-gradient(135deg, #0d3a7a 0%, #082656 100%);
+    box-shadow: 0 6px 20px rgba(21, 88, 184, 0.35);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #161616;
+    margin: 4px 0;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    z-index: 2400;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #0b4ea2;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 2600;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-menu {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =========================
+   MOBILE LINKS
+========================= */
+.mobile-nav-content a,
+.mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-decoration: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.mobile-toggle.active i {
+    transform: rotate(180deg);
+}
+
+/* =========================
+   MOBILE SUBMENU
+========================= */
+.mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+}
+
+.mobile-dropdown.active .mobile-submenu {
+    max-height: 500px;
+}
+
+.mobile-submenu a {
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 90px; /* Positioned above the Back-to-Top button */
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Pulse Animation */
+.whatsapp-float::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25d366;
+    opacity: 0.7;
+    animation: pulse-green 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Label Tooltip */
+.wa-tooltip {
+    position: absolute;
+    right: 75px;
+    background: #333;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .wa-tooltip {
+    opacity: 1;
+}
+
+/* Positioned at the very bottom corner */
+.back-to-top {
+    bottom: 30px; 
+    right: 30px;
+}
+
+/* Positioned exactly 60px above the back-to-top button */
+.whatsapp-float {
+    bottom: 100px; 
+    right: 30px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}

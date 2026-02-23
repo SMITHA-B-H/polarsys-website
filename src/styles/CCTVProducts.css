@@ -1,0 +1,158 @@
+.cctv-section {
+  padding: 60px 0;
+  background: #f9fafb;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  color: #2563eb;
+}
+
+.cctv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.cctv-card {
+    position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.cctv-card:hover {
+  transform: translateY(-6px);
+}
+
+.cctv-card img {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.cctv-card h6 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.brand {
+  font-size: 13px;
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.spec {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 10px 0;
+}
+
+.cctv-card button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cctv-card button:hover {
+  background: #15803d;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* SAVE badge */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 5;
+}
+
+/* Product image */
+.product-card img {
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Title */
+.product-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Price section */
+.price-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+.old-price {
+  font-size: 13px;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+/* Button */
+.quote-btn {
+  width: 100%;
+  padding: 10px;
+  background: #16a34a;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.quote-btn:hover {
+  background: #15803d;
+}

@@ -1,0 +1,150 @@
+/* Footer Styles */
+.site-footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  padding: 60px 40px 30px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== FIXED GRID ===== */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 cards same line */
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+
+/* Footer Columns */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h4 {
+  color: #1558b8;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #1558b8;
+}
+
+.footer-column p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: #0d6efd;
+  padding-left: 5px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-icons a i {
+  color: white;
+  font-size: 16px;
+}
+
+.social-icons a:hover {
+  background: #0d6efd;
+  transform: translateY(-4px);
+}
+
+/* Contact Card */
+.footer-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 6px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer-contact-link i {
+  color: #0d6efd;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-card {
+    margin: auto;
+  }
+}

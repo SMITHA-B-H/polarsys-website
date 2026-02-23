@@ -1,0 +1,200 @@
+/* Biometric Scan Animation */
+.bio-scanner-frame {
+    width: 2000px;
+    height: 2500px;
+    border: 2px solid #198754;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(25, 135, 84, 0.05);
+}
+
+.bio-icon-pulse {
+    font-size: 5rem;
+    color: #198754;
+    animation: bio-glow 2s infinite;
+}
+
+.scan-bar {
+    position: absolute;
+    width: 90%;
+    height: 4px;
+    background: #198754;
+    box-shadow: 0 0 15px #198754;
+    top: 10%;
+    animation: scan-move 3s infinite linear;
+}
+
+@keyframes scan-move {
+    0%, 100% { top: 10%; }
+    50% { top: 90%; }
+}
+
+@keyframes bio-glow {
+    0%, 100% { opacity: 0.6; filter: blur(0px); }
+    50% { opacity: 1; filter: blur(1px); }
+}
+
+.security-tag {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(25, 135, 84, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+.biometric-grid {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(25, 135, 84, 0.05) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(25, 135, 84, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+
+/* Laser Scanning Animation */
+.laser-scanner {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: rgba(25, 135, 84, 0.5);
+    box-shadow: 0 0 15px #198754;
+    animation: laser-move 4s infinite ease-in-out;
+}
+
+@keyframes laser-move {
+    0%, 100% { top: 5%; opacity: 0; }
+    50% { top: 95%; opacity: 1; }
+}
+
+/* Hexagonal Grid for Hero */
+.secure-hex-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.hex-item {
+    width: 120px;
+    height: 120px;
+    background: rgba(25, 135, 84, 0.1);
+    border: 1px solid #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #198754;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: all 0.3s;
+}
+
+.hex-item:hover {
+    background: #198754;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Matrix Steps */
+.matrix-step {
+    gap: 15px;
+}
+
+.step-icon {
+    width: 35px;
+    height: 35px;
+    background: #198754;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.bg-light-success {
+    background-color: #f0fff4;
+}
+
+.spec-card {
+    transition: transform 0.3s;
+}
+
+.spec-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Image container styling */
+.col-lg-5 img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease;
+}
+
+.col-lg-5:hover img {
+    transform: translateY(-10px);
+}
+
+/* Dashboard integration visual */
+.dashboard-mockup {
+    background: #1a1a1a;
+    border: 4px solid #333;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+/* Green Glow for hardware */
+.text-success-glow {
+    color: #28a745;
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+
+.spec-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spec-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #198754; /* bootstrap success */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.spec-card i {
+  font-size: 42px;
+  color: #198754;
+  margin-bottom: 16px;
+}
+
+.spec-card h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.spec-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.spec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}

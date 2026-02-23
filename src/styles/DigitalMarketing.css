@@ -1,0 +1,189 @@
+/* Background Data Stream Effect */
+.data-stream-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(255, 193, 7, 0.05) 1px, transparent 1px);
+    background-size: 100% 40px;
+    animation: streamScroll 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes streamScroll {
+    from { background-position: 0 0; }
+    to { background-position: 0 1000px; }
+}
+
+.text-glow-warn {
+    color: #ffc107;
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+}
+
+/* Glass Pill Styling */
+.glass-pill-marketing {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Funnel UI */
+.funnel-visualization {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.funnel-stage {
+    background: #ffc107;
+    color: #000;
+    font-weight: 800;
+    font-size: 12px;
+    padding: 15px;
+    text-align: center;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.stage-1 { width: 100%; }
+.stage-2 { width: 80%; opacity: 0.8; }
+.stage-3 { width: 60%; opacity: 0.6; }
+
+/* Marketing Card Overlay */
+.mkt-img-container {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mkt-overlay-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #ffc107;
+    color: #000;
+    padding: 3px 10px;
+    font-weight: 900;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+.mkt-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffc107 !important;
+}
+
+/* 222 */
+
+/* Hero Styles */
+.text-warning-glow {
+    color: #ffc107;
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+}
+
+.stat-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Service Elements */
+.service-label {
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.tech-list li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.ppc-display {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ffc107;
+}
+
+.x-small { font-size: 0.75rem; }
+
+/* Progress & Data Overlays */
+.data-stream-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 193, 7, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.fw-black { font-weight: 900; }
+
+.dm-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.dm-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dm-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.dm-img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #1f2428;
+}
+
+.dm-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dm-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #ffc107;
+  color: #000;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.dm-body {
+  padding: 22px;
+}
+
+.dm-body h5 {
+  color: #ffc107;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.dm-body p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}

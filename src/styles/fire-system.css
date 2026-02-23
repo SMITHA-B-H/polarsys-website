@@ -1,0 +1,170 @@
+.ai-hero {
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    padding: 90px 0;
+    color: #fff;
+}
+
+.ai-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.ai-hero p a {
+    color: #bbdefb;
+    text-decoration: none;
+}
+
+/* Hero Fire Pulse Effect */
+.fire-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(220, 38, 38, 0.05) 0%, transparent 80%);
+    animation: fire-pulse 4s infinite;
+}
+
+@keyframes fire-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.fire-panel-display {
+    border-color: #334155 !important;
+}
+
+.panel-screen {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.pulse-line {
+    height: 1px;
+    background: rgba(220, 38, 38, 0.3);
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+.pulse-line::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #dc2626;
+    top: -1px;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    from { left: -10%; }
+    to { left: 110%; }
+}
+
+/* Lifecycle Design */
+.lifecycle-box {
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    border-bottom: 4px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.active-safety {
+    border-bottom-color: #dc2626 !important;
+    background: #fffafa;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: #f8fafc;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.det-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+/* Scan Line Animation in Hero */
+.emergency-scan-line {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 4px;
+    background: rgba(220, 38, 38, 0.5);
+    box-shadow: 0 0 15px #dc2626;
+    animation: fire-scan 5s infinite linear;
+    z-index: 1;
+}
+
+@keyframes fire-scan {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+.bg-white-10 { background: rgba(255,255,255,0.05); }
+.border-white-10 { border-color: rgba(255,255,255,0.1) !important; }
+
+/* Border Glow for Integration SOP */
+.border-danger-glow {
+    border: 1px solid #dc2626 !important;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+.bg-danger-soft {
+    background: #fef2f2;
+}
+
+/* Detector Cards */
+.detector-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.detector-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.detector-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.detector-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+/* ---------- CTA ---------- */
+.fire-cta {
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    color: #fff;
+    padding: 80px 0;
+}
+
+.fire-cta .btn {
+    padding: 12px 35px;
+    font-size: 16px;
+}
+
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+

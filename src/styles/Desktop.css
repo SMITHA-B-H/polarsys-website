@@ -1,0 +1,348 @@
+/* Custom Typography & Glow */
+.fw-black { font-weight: 900; }
+.text-success-glow {
+    color: #198754;
+    text-shadow: 0 0 20px rgba(25, 135, 84, 0.4);
+}
+
+/* Background Grid Overlay */
+.hero-grid-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(13, 110, 253, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 110, 253, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Floating Animation */
+.animate-float {
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Spec Card Positioning */
+.floating-spec-card {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 220px;
+    z-index: 5;
+}
+
+/* Pulse Effect for Status Dot */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #198754;
+    border-radius: 50%;
+}
+.pulse {
+    box-shadow: 0 0 0 rgba(25, 135, 84, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(25, 135, 84, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+/* Brand Icon Floating */
+.brand-icon {
+    position: absolute;
+    width: 40px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.brand-icon:hover { opacity: 1; }
+.icon-1 { bottom: 35%; left: 15%; }
+.icon-2 { bottom: 35%; right: 60%; }
+.icon-3 { top: 25%; left: 23%; }
+
+.min-vh-75 { min-height: 75vh; }
+
+
+
+/* --- Global Hierarchy --- */
+.fw-black { font-weight: 900; }
+.x-small { font-size: 0.7rem; letter-spacing: 1px; }
+.h-px { height: 1px; }
+
+/* --- Brand Strips --- */
+.brand-strip {
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 4px 0;
+}
+
+/* --- Workstation Product Cards --- */
+.product-card {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1) !important;
+}
+
+/* --- Technical Spec Matrix (Towers) --- */
+.spec-matrix .row {
+    margin-left: 0;
+    margin-right: 0;
+    transition: background 0.2s;
+}
+
+.spec-matrix .row:hover {
+    background-color: #f8f9fa;
+}
+
+.spec-matrix i {
+    width: 20px;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* --- Peripheral Cards (Monitors, Keyboards) --- */
+.peripheral-card {
+    background: #fff;
+    transition: all 0.3s ease;
+    border: 1px solid #eee !important;
+    height: 100%;
+}
+
+.peripheral-card:hover {
+    border-color: #0d6efd !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.peripheral-card img {
+    height: 140px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.peripheral-card:hover img {
+    transform: scale(1.05);
+}
+
+.peripheral-card h6 {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+/* --- Pricing Labels --- */
+.badge.bg-light.text-dark {
+    font-family: 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border: 1px solid #e9ecef;
+}
+
+/* --- Animation for Fade-In --- */
+[data-aos] {
+    pointer-events: none;
+}
+.aos-animate {
+    pointer-events: auto;
+}
+
+/* --- Print/PDF Styling --- */
+@media print {
+    .btn, .brand-strip, .sticky-top {
+        display: none !important;
+    }
+    .product-card {
+        border: 1px solid #000 !important;
+        break-inside: avoid;
+    }
+}
+
+/* Re-establish Button Animation */
+.btn-outline-light:hover i {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+
+
+.products-wrapper {
+  padding: 50px 60px;
+  background: #fafafa;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.product-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* Content */
+.product-content {
+  padding: 22px;
+}
+
+.brand {
+  font-size: 14px;
+  color: #8f2cff;
+  font-weight: 600;
+}
+
+.product-content h3 {
+  margin: 8px 0 16px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Specs */
+.product-content ul {
+  list-style: none;
+  margin-bottom: 22px;
+}
+
+.product-content li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.check {
+  color: #22c55e;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Button */
+.quote-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #8f2cff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: #6f1fd8;
+}
+
+
+
+.desktop-wrapper {
+  padding: 50px 60px;
+  background: #f9fafb;
+}
+
+.desktop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.desktop-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.desktop-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.desktop-body {
+  padding: 20px;
+}
+
+.brand {
+  color: #8f2cff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.desktop-body h3 {
+  margin: 8px 0 16px;
+  font-size: 20px;
+}
+
+.config-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+  background: #fafafa;
+}
+
+.config-box p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.price-row button {
+  background: #8f2cff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.price-row button:hover {
+  background: #6f1fd8;
+}

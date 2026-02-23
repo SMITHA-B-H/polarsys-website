@@ -1,0 +1,411 @@
+/* ===============================
+ SERVICE HERO
+================================ */
+.service-hero {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    color: #fff;
+    padding: 70px 0;
+    /* text-align: center; */
+}
+
+.service-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+/* .service-hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 15px auto 0;
+} */
+.service-hero a {
+    color: #fff;
+}
+.service-hero a:hover {
+    color: #bbdefb;
+    text-decoration: underline;
+}
+
+
+/* ===============================
+ SERVICE DETAIL
+================================ */
+/* Typography & Layout */
+.fw-black { font-weight: 900; }
+.tracking-widest { letter-spacing: 0.2em; }
+.py-6 { padding-top: 5rem; padding-bottom: 5rem; }
+
+.bg-success-light {
+    background: rgba(25, 135, 84, 0.1);
+}
+
+/* Image Wrapper with decorative frame */
+.image-wrapper-detail {
+    padding: 20px;
+    z-index: 1;
+}
+
+.image-wrapper-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border-top: 5px solid #198754;
+    border-left: 5px solid #198754;
+    border-radius: 30px 0 0 0;
+    z-index: -1;
+}
+
+/* Floating Badge Animation */
+.floating-badge-dev {
+    position: absolute;
+    bottom: 10%;
+    right: -20px;
+    min-width: 220px;
+    animation: floatUpDown 4s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feature List Styling */
+.technical-description {
+    line-height: 1.8;
+    border-left: 3px solid #f0f0f0;
+    padding-left: 20px;
+}
+
+.btn-success {
+    background-color: #198754;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #146c43;
+    transform: translateX(5px);
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.2);
+}
+
+
+/* ===============================
+ CTA
+================================ */
+.service-cta {
+    background: #0d47a1;
+    color: #fff;
+    padding: 70px 0;
+}
+
+.service-cta h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-cta .btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+
+
+
+/* ================================
+   DEVELOPMENT PROCESS
+================================ */
+.service-process1 {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0b2a4a, #1a73e8);
+    color: #ffffff;
+}
+
+.service-process1 h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.service-process1 .row > div {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 18px 10px;
+    position: relative;
+}
+
+/* Step Circle */
+.service-process1 .row > div::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    color: #1a73e8;
+    font-weight: 700;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 12px;
+    line-height: 44px;
+}
+
+/* Enable counter */
+.service-process1 .row {
+    counter-reset: step;
+}
+
+/* Connector line */
+@media (min-width: 768px) {
+    .service-process1 .row > div:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 40px;
+        right: -50%;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Mobile Fix */
+@media (max-width: 767px) {
+    .service-process1 .row > div {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* =========================
+ WHAT WE OFFER
+========================= */
+
+.what-we-offer {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Offer Card */
+.offer-card {
+    background: #13235f;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icon */
+.offer-card img {
+    width: 60px;
+    margin-bottom: 18px;
+}
+
+/* Title */
+.offer-card h5 {
+    font-weight: 600;
+    margin-bottom: 0;
+    transition: margin 0.3s ease;
+}
+
+/* Description (HIDDEN BY DEFAULT) */
+.offer-card p {
+    font-size: 14px;
+    color: #181717;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.35s ease;
+}
+
+/* HOVER EFFECT */
+.offer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.offer-card:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.offer-card:hover h5 {
+    margin-bottom: 10px;
+}
+
+/* MOBILE FIX — ALWAYS SHOW TEXT */
+@media (max-width: 768px) {
+    .offer-card p {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* Workflow Steps Design */
+.workflow-steps {
+    border-left: 2px dashed #e2e8f0;
+    padding-left: 30px;
+    margin-left: 15px;
+}
+
+.step {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.step-num {
+    position: absolute;
+    left: -46px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 4px solid #fff;
+}
+
+.capability-box {
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.capability-box:hover {
+    border-color: #2563eb !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Sidebar List */
+.list-group-item {
+    border: none;
+    padding: 12px 20px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.list-group-item.active {
+    background-color: #2563eb;
+    border-radius: 8px;
+}
+
+
+
+.text-success-glow {
+    color: #198754;
+    text-shadow: 0 0 15px rgba(25, 135, 84, 0.4);
+}
+
+.tech-pill-software {
+    background: rgba(25, 135, 84, 0.1);
+    border: 1px solid rgba(25, 135, 84, 0.3);
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+.dev-terminal {
+    font-family: 'Courier New', monospace;
+    opacity: 0.9;
+}
+
+.terminal-dots span {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.dot-red { background: #ff5f56; } .dot-yellow { background: #ffbd2e; } .dot-green { background: #27c93f; }
+
+
+.bg-success-soft { background-color: rgba(25, 135, 84, 0.1); }
+
+.fw-black { font-weight: 900; }
+
+.h-px { height: 1px; }
+
+.icon-box-sm {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+.offer-card-premium {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    border-color: #f0f0f0 !important;
+}
+
+.offer-card-premium:hover {
+    transform: translateY(-10px);
+    border-color: #198754 !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+}
+
+.process-visual-container {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 30px;
+}
+
+.floating-stat-card {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 180px;
+    z-index: 5;
+}
+
+.pulse-green {
+    width: 100%; height: 100%;
+    width: 10px; height: 10px;
+    background: #198754;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(25, 135, 84, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(25, 135, 84, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+.dev-feature-card {
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.dev-feature-card:hover {
+  transform: translateY(-6px);
+}

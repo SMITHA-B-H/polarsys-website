@@ -1,0 +1,290 @@
+/* Hero Glow Effect */
+.glow-orb {
+    position: absolute;
+    top: 10%; right: 5%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(25, 135, 84, 0.15) 0%, transparent 70%);
+    z-index: 1;
+}
+
+/* Gradient Text */
+.text-gradient {
+    background: linear-gradient(90deg, #198754, #20c997);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+
+/* Panel Mockup Styling */
+.panel-mockup-container {
+    position: relative;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    border: 8px solid #333;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+}
+
+.floating-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #198754;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Custom Success Glow Badge */
+.bg-success-glow {
+    background: rgba(25, 135, 84, 0.2);
+    border: 1px solid #198754;
+    color: #198754;
+}
+
+/* PDF Button Styling */
+.btn-outline-dark.rounded-pill:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+.py-7 { padding: 7rem 0; }
+
+.tracking-widest { letter-spacing: 3px; }
+
+/* Icon Circles */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.bg-light-primary { background: rgba(13, 110, 253, 0.1); }
+.bg-light-success { background: rgba(25, 135, 84, 0.1); }
+.bg-light-warning { background: rgba(255, 193, 7, 0.1); }
+
+/* Hover Effects */
+.transition-hover:hover {
+    background-color: #f8f9fa;
+}
+
+.transition-hover:hover .icon-circle {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Ecosystem Visual */
+.ecosystem-visual img {
+    filter: drop-shadow(0 0 30px rgba(25, 135, 84, 0.3));
+    max-width: 100%;
+}
+
+/* Integration Badges */
+.integration-badge {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    min-width: 100px;
+}
+
+
+/* Hero Glow */
+.interactive-hero {
+    background: radial-gradient(circle at 80% 20%, #1a1a1a 0%, #000 100%);
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* Re-establish Button Animation */
+.btn-outline-light:hover i {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+/* Feature Tags */
+.feature-tags .badge {
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+/* Image Transitions */
+.product-card img {
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03);
+}
+.use-case-image {
+  height: 260px;               /* SAME height for all */
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.use-case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* 🔑 magic fix */
+  display: block;
+}
+
+
+/* Section spacing */
+.py-6 {
+  padding: 5rem 0;
+}
+
+/* Connectivity card */
+.connectivity-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.connectivity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon styling */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: rgba(13, 110, 253, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box svg {
+  font-size: 32px;
+  color: #0d6efd;
+}
+.connectivity-card:hover .icon-box {
+  transform: scale(1.08);
+}
+.icon-box {
+  transition: transform 0.25s ease;
+}
+
+
+
+.product-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+}
+.badge {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  font-weight: 500;
+}
+
+
+.products-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+/* Card */
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.product-brand {
+  font-size: 0.85rem;
+  color: #8a3ffc;
+  font-weight: 600;
+}
+
+.product-title {
+  font-weight: 700;
+  margin: 0.3rem 0 1rem;
+}
+
+/* Features */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Button */
+.btn-quote {
+  margin-top: auto;
+  background: #8a3ffc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-quote:hover {
+  background: #732de3;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}

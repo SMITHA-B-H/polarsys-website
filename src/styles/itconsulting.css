@@ -1,0 +1,112 @@
+/* Hero Abstract Design */
+.abstract-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(13, 110, 253, 0.1), transparent);
+    z-index: 1;
+}
+
+/* Pillar Card Styles */
+.pillar-card {
+    transition: all 0.3s ease;
+    background: #fff;
+    border-bottom: 4px solid transparent !important;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: #0d6efd !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
+}
+
+.pillar-icon-box {
+    width: 60px;
+    height: 60px;
+    background: #f0f7ff;
+    color: #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 1.5rem;
+}
+
+/* Methodology Steps */
+.step-count {
+    min-width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.heading-line {
+    width: 50px;
+    height: 3px;
+    background: #0d6efd;
+    margin-top: 10px;
+}
+
+/* Floating Card */
+.floating-data-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 280px;
+}
+
+
+
+.ls-2 { letter-spacing: 2px; }
+
+.industry-badge {
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #444;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.industry-badge:hover {
+    background: #f0f7ff;
+    border-color: #0d6efd;
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+.fw-black {
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.framework-box {
+    background: rgba(13, 110, 253, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.framework-box li {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}

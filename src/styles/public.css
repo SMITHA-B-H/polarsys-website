@@ -1,0 +1,146 @@
+/* ---------- SECTION ---------- */
+
+.pa-section {
+  padding: 60px 0;
+  background: #f8f9fb;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.section-title span {
+  color: #0d6efd;
+}
+
+/* ---------- GRID ---------- */
+
+.pa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ---------- PRODUCT CARD ---------- */
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- BADGE ---------- */
+
+.discount-badge {
+  /* position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600; */
+   position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ef4444;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ---------- IMAGE ---------- */
+
+.product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* ---------- TEXT ---------- */
+
+.product-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.brand {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.spec {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 14px;
+}
+
+/* ---------- PRICE ---------- */
+
+.price-box {
+  margin-bottom: 15px;
+}
+
+.current-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #198754;
+  margin-right: 8px;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* ---------- BUTTON ---------- */
+
+.quote-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.quote-btn:hover {
+  background: #084298;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+
+}
