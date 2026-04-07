@@ -1,0 +1,71 @@
+/* HERO */
+.pf-hero {
+  height: 70vh;
+  background: linear-gradient(135deg, #0d2b52, #1976d2);
+}
+
+/* Coming Soon Badge */
+.coming-badge {
+  display: inline-block;
+  background: #ffc107;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* FEATURE CARD */
+.pf-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.pf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.pf-card i {
+  font-size: 34px;
+  color: #62a8f3;
+  margin-bottom: 10px;
+}
+
+/* USE CASE */
+.pf-use {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eef2f7;
+  transition: 0.3s;
+}
+
+.pf-use:hover {
+  transform: translateY(-5px);
+}
+
+.pf-use i {
+  font-size: 28px;
+  color: #62a8f3;
+  margin-bottom: 8px;
+}
+
+/* CTA */
+.pf-cta {
+  background: linear-gradient(135deg, #0d2b52, #1976d2);
+  padding: 60px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pf-hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+}

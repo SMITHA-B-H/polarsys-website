@@ -1,18 +1,4 @@
-// import React from 'react';
 
-// function HomePage() {
-//   return (
-//     <div style={{ padding: '20px', textAlign: 'center' }}>
-//       <h2>Home Page</h2>
-//       <p>Welcome to the home page of our React app!</p>
-//       <button style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}>
-//         Get Started
-//       </button>
-//     </div>
-//   );
-// }
-
-// export default HomePage;
 
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -61,18 +47,18 @@ const brands = [
   { name: "Dell", logo: dellLogo, path: "/products/dell" }
 ];
 const services = [
-  { title: "Software Development", path: "application-development", img: "c1.jpg" },
-  { title: "Networking", path: "networking", img: "c2.jpg" },
+  { title: "Software Development", path: "application-development", img: "s1.jpg" },
+  { title: "Networking", path: "networking", img: "s2.jpg" },
   { title: "Fire Safety", path: "fire-system", img: "c10.jpg" },
-  { title: "Fire Hydrant", path: "fire-hydrant", img: "c11.jpg" },
-  { title: "Access Control", path: "access-control", img: "c5.jpg" },
-  { title: "Automation", path: "automation", img: "c7.jpg" },
-  { title: "CCTV", path: "cctv", img: "c9.jpg" },
-  { title: "Intercom", path: "intercom", img: "c8.jpg" },
-  { title: "Public Address", path: "pa-system", img: "c13.jpg" },
+  { title: "Fire Hydrant", path: "fire-hydrant", img: "s4.jpg" },
+  { title: "Access Control", path: "access-control", img: "s5.jpg" },
+  { title: "Automation", path: "automation", img: "s6.jpg" },
+  { title: "CCTV", path: "cctv", img: "s7.jpg" },
+  { title: "Intercom", path: "intercom", img: "s8.jpg" },
+  { title: "Public Address", path: "pa-system", img: "s9.jpg" },
   { title: "Digital Marketing", path: "digital-marketing", img: "c3.jpg" },
-  { title: "IT Consulting", path: "it-consulting", img: "c6.jpg" },
-  { title: "Smart Class Setup", path: "smart-class", img: "c12.jpg" }
+  { title: "IT Consulting", path: "it-consulting", img: "s11.jpg" },
+  { title: "Smart Class Setup", path: "smart-class", img: "s12.jpg" }
 ];
 const HomePage = () => {
   useEffect(() => {

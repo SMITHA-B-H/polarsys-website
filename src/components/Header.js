@@ -25,7 +25,7 @@ import '../styles/Header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
+  const [productDropdown, setProductDropdown] = useState(null);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name) => {
     setActiveDropdown(activeDropdown === name ? null : name);
@@ -99,31 +99,80 @@ const Header = () => {
               </div>
             </li>
 
-            {/* Products Dropdown */}
+            {/* products */}
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Products</a>
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                data-bs-toggle="dropdown"
+              >
+                Products
+              </a>
+
               <ul className="dropdown-menu shadow border-0">
-                {/* <li><Link className="dropdown-item" to="/products/laptops"></Link></li>
-                <li><Link className="dropdown-item" to="/products/panels">Interactive Panels</Link></li>
-                 <li><Link className="dropdown-item" to="/products/panels">Interactive Panels</Link></li>
-                <li><Link className="dropdown-item" to="/products/desktop">Desktop</Link></li> */}
-                <li><Link className="dropdown-item" to="/products/cctv-p">CCTV</Link></li>
-                <li><Link className="dropdown-item" to="/products/biometric">Home/Building</Link></li>
-                <li><Link className="dropdown-item" to="/products/pa">Public Address </Link></li>
-                {/* <li><Link className="dropdown-item" to="/products/solar-cameras">Solar Cameras</Link></li> */}
-                <li><Link className="dropdown-item" to="/products/fire-hydrantss">Fire Hydrant</Link></li>
-                <li><Link className="dropdown-item" to="/products/smoke-detectors">Fire Alarm</Link></li>
-                {/* <li><Link className="dropdown-item" to="/products/cat-6e-cables">CAT 6E Cables</Link></li> */}
-                <li><Link className="dropdown-item" to="/products/access-point">Access Control</Link></li>
-                <li><Link className="dropdown-item" to="/products/network-switch">Network Products</Link></li>
-                <li><Link className="dropdown-item" to="/products/inter-com">Intercom System</Link></li>
-                <li><Link className="dropdown-item" to="/products/panel">Interactive Panels</Link></li>
+
+                 {/* Software */}
+                <li>
+                  <a
+                    href="#"
+                    className="dropdown-item d-flex justify-content-between align-items-center"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setProductDropdown(productDropdown === 'software' ? null : 'software');
+                    }}
+                  >
+                    <span><i className="bi bi-code-slash me-2"></i>Software</span>
+                    <i className="bi bi-chevron-right"></i>
+                  </a>
+
+                  {productDropdown === 'software' && (
+                    <ul className="submenu">
+                      <li><Link className="dropdown-item" to="/products/solis"><i className="bi bi-sun me-2"></i>Solis</Link></li>
+                      <li><Link className="dropdown-item" to="/products/polarface"><i className="bi bi-person-bounding-box me-2"></i>PolarFace</Link></li>
+                    </ul>
+                  )}
+                </li>
+
+
+
+                {/* Hardware */}
+                <li>
+                  <a
+                    href="#"
+                    className="dropdown-item d-flex justify-content-between align-items-center"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setProductDropdown(productDropdown === 'hardware' ? null : 'hardware');
+                    }}
+                  >
+                    <span><i className="bi bi-cpu me-2"></i>Hardware</span>
+                    <i className="bi bi-chevron-right"></i>
+                  </a>
+
+                  {productDropdown === 'hardware' && (
+                    <ul className="submenu">
+                      <li><Link className="dropdown-item" to="/products/cctv-p"><i className="bi bi-camera-video me-2"></i>CCTV</Link></li>
+                      <li><Link className="dropdown-item" to="/products/biometric"><i className="bi bi-fingerprint me-2"></i>Home/Building</Link></li>
+                      <li><Link className="dropdown-item" to="/products/pa"><i className="bi bi-mic me-2"></i>Public Address</Link></li>
+                      <li><Link className="dropdown-item" to="/products/fire-hydrantss"><i className="bi bi-water me-2"></i>Fire Hydrant</Link></li>
+                      <li><Link className="dropdown-item" to="/products/smoke-detectors"><i className="bi bi-bell me-2"></i>Fire Alarm</Link></li>
+                      <li><Link className="dropdown-item" to="/products/access-control"><i className="bi bi-shield-lock me-2"></i>Access Control</Link></li>
+                      <li><Link className="dropdown-item" to="/products/network-switch"><i className="bi bi-hdd-network me-2"></i>Network Products</Link></li>
+                      <li><Link className="dropdown-item" to="/products/inter-com"><i className="bi bi-telephone me-2"></i>Intercom System</Link></li>
+                      <li><Link className="dropdown-item" to="/products/panel"><i className="bi bi-easel me-2"></i>Interactive Panels</Link></li>
+                    </ul>
+                  )}
+                </li>
+
                
+
               </ul>
             </li>
 
+
             {/* Buy Refurbished Dropdown */}
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Buy Refurbished Laptop</a>
               <ul className="dropdown-menu shadow border-0">
                 <li><Link className="dropdown-item" to="/products/hp">HP</Link></li>
@@ -131,7 +180,7 @@ const Header = () => {
                 <li><Link className="dropdown-item" to="/products/dell">Dell</Link></li>
                 <li><Link className="dropdown-item" to="/products/apple">MacBook</Link></li>
               </ul>
-            </li>
+            </li> */}
 
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/contact" className="btn-contact">Contact</Link></li>
@@ -191,23 +240,46 @@ const Header = () => {
               <span><i className="fa-solid fa-cart-shopping me-2"></i>Products</span>
               <i className={`fa-solid fa-chevron-${activeDropdown === 'products' ? 'up' : 'down'}`}></i>
             </div>
-            <div className={`mobile-submenu ${activeDropdown === 'products' ? 'active' : ''}`}>
-              <Link to="/products/cctv-p" onClick={toggleMenu}>CCTV</Link>
-              <Link to="/products/biometric" onClick={toggleMenu}>Home/Building</Link>
-              <Link to="/products/pa" onClick={toggleMenu}>Public Address</Link>
-              <Link to="/products/fire-hydrantss" onClick={toggleMenu}>Fire Hydrant</Link>
-              <Link to="/products/smoke-detectors" onClick={toggleMenu}>Fire Alarm</Link>
-              <Link to="/products/access-control" onClick={toggleMenu}>Access Control</Link>
-              <Link to="/products/network-switch" onClick={toggleMenu}>Network Products</Link>
-              <Link to="/products/inter-com" onClick={toggleMenu}>Intercom System</Link>
-              <Link to="/products/panel" onClick={toggleMenu}>Interactive Panels</Link>
 
- 
+            <div className={`mobile-submenu ${activeDropdown === 'products' ? 'active' : ''}`}>
+
+              {/* Software */}
+              <div className={`mobile-dropdown ${activeDropdown === 'software' ? 'active' : ''}`}>
+                <div className="mobile-toggle" onClick={() => toggleDropdown('software')}>
+                  Software
+                </div>
+                <div className={`mobile-submenu ${activeDropdown === 'software' ? 'active' : ''}`}>
+                  <Link to="/products/solis" onClick={toggleMenu}>Solis</Link>
+                  <Link to="/products/polarface" onClick={toggleMenu}>PolarFace</Link>
+                </div>
+              </div>
+
+
+              {/* Hardware */}
+              <div className={`mobile-dropdown ${activeDropdown === 'hardware' ? 'active' : ''}`}>
+                <div className="mobile-toggle" onClick={() => toggleDropdown('hardware')}>
+                  Hardware
+                </div>
+                <div className={`mobile-submenu ${activeDropdown === 'hardware' ? 'active' : ''}`}>
+                  <Link to="/products/cctv-p" onClick={toggleMenu}>CCTV</Link>
+                  <Link to="/products/biometric" onClick={toggleMenu}>Home/Building</Link>
+                  <Link to="/products/pa" onClick={toggleMenu}>Public Address</Link>
+                  <Link to="/products/fire-hydrantss" onClick={toggleMenu}>Fire Hydrant</Link>
+                  <Link to="/products/smoke-detectors" onClick={toggleMenu}>Fire Alarm</Link>
+                  <Link to="/products/access-control" onClick={toggleMenu}>Access Control</Link>
+                  <Link to="/products/network-switch" onClick={toggleMenu}>Network Products</Link>
+                  <Link to="/products/inter-com" onClick={toggleMenu}>Intercom System</Link>
+                  <Link to="/products/panel" onClick={toggleMenu}>Interactive Panels</Link>
+                </div>
+              </div>
+
+
+
             </div>
           </div>
 
            {/* buy re Products Dropdown */}
-          <div className={`mobile-dropdown ${activeDropdown === 'buy-refurbished-laptop' ? 'active' : ''}`}>
+          {/* <div className={`mobile-dropdown ${activeDropdown === 'buy-refurbished-laptop' ? 'active' : ''}`}>
             <div className="mobile-toggle" onClick={() => toggleDropdown('buy-refurbished-laptop')}>
               <span><i className="fa-solid fa-laptop me-2"></i>Buy Refurbished</span>
               <i className={`fa-solid fa-chevron-${activeDropdown === 'buy-refurbished-laptop' ? 'up' : 'down'}`}></i>
@@ -218,7 +290,7 @@ const Header = () => {
               <Link to="/products/dell" onClick={toggleMenu}>Dell</Link>
               <Link to="/products/apple" onClick={toggleMenu}>MacBook</Link>
             </div>
-          </div>
+          </div> */}
 
 
           <Link to="/careers" onClick={toggleMenu}><i className="fa-solid fa-briefcase me-2"></i> Careers</Link>

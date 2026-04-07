@@ -13,7 +13,7 @@ import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import Careers from './pages/Careers';
-// import GalleryPage from './pages/GalleryPage';
+import GalleryPage from './pages/GalleryPage';
 
 // ... import other services/products pages
 import SoftwareApplication from './pages/services/SoftwareApplication';
@@ -42,6 +42,12 @@ import HomeAutomationProducts from './pages/products/HomeAutomationProducts';
 import PublicAddressProducts from './pages/products/PublicAddressProducts';
 import SmartClassSetup from './pages/services/SmartClassSetup';
 import InteractivePanel from './pages/products/InteractivePanel';
+
+
+import Solis from './pages/products/Solis';
+import PolarFace from './pages/products/PolarFace';
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -98,6 +104,10 @@ function App() {
           <Route path="/products/biometric" element={<HomeAutomationProducts />} />
           <Route path="/products/pa" element={<PublicAddressProducts />} />
           <Route path="/products/panel" element={<InteractivePanel />} />
+
+          <Route path="/products/solis" element={<Solis/>}/>
+          <Route path="/products/polarface" element={<PolarFace/>}/>
+
 
           <Route path="/products/hp" element={<HpRefurbishedProducts />} />
           <Route path="/products/dell" element={<DellRefurbishedProducts />} />

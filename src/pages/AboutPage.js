@@ -420,7 +420,8 @@ const AboutPage = () => {
 
       ></div>
 
-    </div></section>
+    </div>
+</section>
 <div className="d-flex flex-wrap justify-content-center g-4 mt-2">
   
   {/* Leader 1 - Ravish */}
@@ -458,8 +459,81 @@ const AboutPage = () => {
       </div>
     </div>
   </div>
+</div>
 
+<br/>
+<br/>
+
+
+{/* TEAM GRID - Updated for 5 Leaders */}
+<section>
+    {/* Section Header */}
+
+    <div className="text-center mb-5" data-aos="fade-up">
+
+      <span className="text-primary fw-bold small text-uppercase tracking-widest">
+      </span>
+      <h2 className="fw-bold mt-2">The Advisors Board Polarsys</h2>
+      <div
+
+        className="mx-auto bg-primary mt-3"
+
+        style={{ height: "3px", width: "60px" }}
+
+      ></div>
+
+    </div>
+</section>
+<div className="d-flex flex-wrap justify-content-center g-4 mt-2">
+  {/* leader 11 */}
+  <div className="col-leader">
+  <div
+    className="card leader-card border-0 text-center shadow-sm h-100"
+    data-aos="fade-up"
+    data-aos-delay="500"
+  >
+    <div className="leader-image-container mt-4">
+      <img
+        src={require("../assets/image/sandeepa.png")} // make sure image exists
+        className="rounded-circle profile-img"
+        alt="Sandeep BS"
+      />
+      <div className="social-overlay">
+        <a href="#"><i className="fab fa-linkedin-in"></i></a>
+        <a href="#"><i className="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div className="card-body p-4">
+      <h5 className="fw-bold mb-1">Sandeep BS</h5>
+      <p className="text-primary small fw-bold mb-3">Chief Technology Officer (CTO)</p>
+      <p className="small text-muted px-2">
+        Driving technology strategy, system architecture, and scalable innovation.
+      </p>
+    </div>
+  </div>
+</div>
   {/* Leader 2 - Anjaneya */}
+
+    <div className="col-leader">
+    <div className="card leader-card border-0 text-center shadow-sm h-100" data-aos="fade-up" data-aos-delay="400">
+      <div className="leader-image-container mt-4">
+        <img src={require("../assets/image/chethan.png")} className="rounded-circle profile-img" alt="Chethan kumar V" />
+        <div className="social-overlay">
+          <a href="#"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#"><i className="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div className="card-body p-4">
+        <h5 className="fw-bold mb-1">Chethan kumar V</h5>
+        <p className="text-primary small fw-bold mb-3">Technical Head</p>
+        <p className="small text-muted px-2">Specializing in full-stack development and security.</p>
+      </div>
+    </div>
+  </div>
+
+ {/* Leader 3 - Chethan */}
+
   <div className="col-leader">
     <div className="card leader-card border-0 text-center shadow-sm h-100" data-aos="fade-up" data-aos-delay="200">
       <div className="leader-image-container mt-4">
@@ -477,7 +551,7 @@ const AboutPage = () => {
     </div>
   </div>
 
-  {/* Leader 3 - Mahanthesh */}
+  {/* Leader 4 - Mahanthesh */}
   <div className="col-leader">
     <div className="card leader-card border-0 text-center shadow-sm h-100" data-aos="fade-up" data-aos-delay="300">
       <div className="leader-image-container mt-4">
@@ -494,29 +568,8 @@ const AboutPage = () => {
       </div>
     </div>
   </div>
-
-  {/* Leader 4 - Chethan */}
-  <div className="col-leader">
-    <div className="card leader-card border-0 text-center shadow-sm h-100" data-aos="fade-up" data-aos-delay="400">
-      <div className="leader-image-container mt-4">
-        <img src={require("../assets/image/chethan.png")} className="rounded-circle profile-img" alt="Chethan kumar V" />
-        <div className="social-overlay">
-          <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          <a href="#"><i className="fas fa-envelope"></i></a>
-        </div>
-      </div>
-      <div className="card-body p-4">
-        <h5 className="fw-bold mb-1">Chethan kumar V</h5>
-        <p className="text-primary small fw-bold mb-3">Technical Head</p>
-        <p className="small text-muted px-2">Specializing in full-stack development and security.</p>
-      </div>
-    </div>
-  </div>
-
-  
-
 </div>
-    
+
   
       {/* CTA */}
 

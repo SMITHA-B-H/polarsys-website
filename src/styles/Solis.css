@@ -1,0 +1,390 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.section-title::after {
+    content: "";
+    width: 90px;
+    height: 3px;
+    background: #62a8f3;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-40%); /* Center align underline */
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 70vh;
+  background: linear-gradient(135deg, rgba(13,43,82,0.85), rgba(25,118,210,0.85)),
+              url('../assets/image/it1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.hero-section h4 {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.hero-section .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* FEATURES */
+.feature-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(135deg, #62a8f3, #4a90e2);
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.4s;
+}
+
+.feature-card:hover::before {
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  color: #fff;
+}
+
+.feature-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card i {
+  font-size: 36px;
+  color: #62a8f3;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.feature-card:hover i {
+  color: #fff;
+}
+
+.feature-card h5 {
+  font-weight: 600;
+}
+
+/* HOW IT WORKS */
+.step-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.step-box span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #62a8f3;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ARCHITECTURE */
+.bg-light {
+  background: #f8fbff !important;
+}
+
+.container h6 {
+  font-weight: 600;
+  color: #0d2b52;
+}
+
+.container p {
+  margin-bottom: 0;
+}
+
+/* SECURITY LIST */
+section ul {
+  padding-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+section ul li::before {
+  content: "✔";
+  color: #62a8f3;
+  position: absolute;
+  left: 0;
+}
+
+/* BENEFITS */
+h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* CTA SECTION */
+/* CTA SECTION */
+.cta-section {
+  background: linear-gradient(135deg, #0d2b52, #1976d2);
+  padding: 70px 0;
+}
+
+.cta-section h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.cta-section .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.cta-section .btn-light:hover {
+  background: #62a8f3;
+  color: #fff;
+}
+
+.cta-section .btn-success:hover {
+  background: #25d366;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ICON SIZE */
+.cta-section i {
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* BENEFIT CARD */
+.benefit-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.benefit-card h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0d2b52;
+}
+
+.benefit-card h5 i {
+  color: #62a8f3;
+}
+
+/* LIST STYLE */
+.benefit-card ul {
+  padding-left: 0;
+}
+
+.benefit-card ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.benefit-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #62a8f3;
+  font-size: 14px;
+}
+
+/* USE CASE */
+.use-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+}
+
+.use-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.use-card i {
+  font-size: 36px;
+  color: #62a8f3;
+  margin-bottom: 10px;
+}
+
+.use-card p {
+  font-weight: 500;
+  margin: 0;
+}
+
+/* WHY SECTION */
+.why-section {
+  background: linear-gradient(135deg, #0d2b52, #1976d2);
+  padding: 70px 0;
+}
+
+.why-section .section-title::after {
+  background: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .benefit-card {
+    padding: 20px;
+  }
+
+  .use-card {
+    padding: 20px;
+  }
+}
+
+
+/* SECURITY SECTION */
+.security-section {
+  background: #f8fbff;
+}
+
+/* CARD */
+.security-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover glow effect */
+.security-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.security-card i {
+  font-size: 32px;
+  color: #62a8f3;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+/* Title */
+.security-card h6 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0d2b52;
+}
+
+/* Description */
+.security-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Subtle top border animation */
+.security-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #62a8f3;
+  transition: 0.4s;
+}
+
+.security-card:hover::before {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .security-card {
+    padding: 20px;
+  }
+}

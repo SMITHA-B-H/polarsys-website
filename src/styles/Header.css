@@ -333,7 +333,7 @@ body {
 .mega-item i {
     margin-right: 12px;
     font-size: 18px;
-    color: #cbd5e0;
+    color: #62a8f3;
     transition: color 0.2s ease;
 }
 
@@ -362,6 +362,54 @@ body {
     .nav-item.mega-dropdown:hover .mega-menu-content {
         display: block;
     }
+}
+
+/* Submenu positioning */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+}
+
+/* Show submenu on hover */
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+/* Arrow indicator */
+.dropdown-submenu > a::after {
+  content: "▶";
+  float: right;
+  font-size: 12px;
+}
+
+.dropdown-item i {
+    margin-right: 12px;
+    font-size: 18px;
+    color: #62a8f3;
+    transition: color 0.2s ease;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+/* Remove bullets from dropdown lists */
+.dropdown-menu,
+.dropdown-menu ul,
+.submenu {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Remove any custom square bullets */
+.dropdown-menu li::marker {
+  content: "";
 }
 
 /* =========================
