@@ -76,8 +76,7 @@ body {
   bottom: 0;
   opacity: 0.25;
 
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-opacity='0.3' d='M0,60 C300,0 900,120 1200,60 L1200,120 L0,120 Z'%3E%3C/path%3E%3C/svg%3E");
-
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-opacity='0.3' d='M0,60 C300,0 900,120 1200,60 L1200,120 L0,120 Z'%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
   animation: waveMove 12s linear infinite;
 }
 
@@ -86,11 +85,14 @@ body {
   bottom: 10px;
   opacity: 0.15;
 
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-opacity='0.2' d='M0,50 C400,120 800,0 1200,50 L1200,120 L0,120 Z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-opacity='0.2' d='M0,50 C400,120 800,0 1200,50 L1200,120 L0,120 Z'%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
 
   animation: waveMoveReverse 18s linear infinite;
 }
-
+/* .hero::before,
+.hero::after {
+  display: none;
+} */
 /* Wave Animations */
 @keyframes waveMove {
   from {
@@ -535,15 +537,22 @@ body {
 }
 
 .stats-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="rgba(255,255,255,0.05)" d="M0,50 Q300,30 600,50 T1200,50 L1200,120 L0,120 Z"></path></svg>') repeat-x top;
+
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='rgba(255,255,255,0.05)' d='M0,50 Q300,30 600,50 T1200,50 L1200,120 L0,120 Z'%3C%2Fpath%3E%3C%2Fsvg%3E")
+    repeat-x top;
+
   opacity: 0.3;
 }
+
+/* .stats-section::before {
+  display: none;
+} */
 
 .stats-section .row {
   position: relative;

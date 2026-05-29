@@ -1,14 +1,8 @@
-:root {
-  --primary: #3b82f6;
-  --dark-bg: #0f172a;
-  --card-bg: #1e293b;
-  --text-muted: #94a3b8;
-}
-
-.gallery-page { background-color: var(--dark-bg); color: white; min-height: 100vh; padding-bottom: 100px; }
-
 /* HERO */
-.gallery-hero { padding: 120px 0 60px; text-align: center; }
+.gallery-hero {
+   padding: 120px 0 60px;
+    text-align: center; 
+  }
 .premium-tag { 
   font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; 
   color: var(--primary); font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3);
@@ -72,7 +66,7 @@
 @media (max-width: 768px) {
   .gallery-hero h1 { font-size: 2.5rem; }
   .masonry-grid { grid-template-columns: 1fr; }
-}
+} 
 
 /* SECTION */
 .gallery-section {

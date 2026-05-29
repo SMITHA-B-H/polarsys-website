@@ -1,22 +1,3 @@
-// import React from 'react';
-
-// function Header() {
-//   return (
-//     <header style={{ backgroundColor: '#282c34', padding: '20px', color: 'white' }}>
-//       <h1>Welcome to My App</h1>
-//       <nav>
-//         <a href="#home" style={{ marginRight: '20px', color: 'white' }}>Home</a>
-//         <a href="#about" style={{ marginRight: '20px', color: 'white' }}>About</a>
-//         <a href="#contact" style={{ color: 'white' }}>Contact</a>
-//       </nav>
-//     </header>
-//   );
-// }
-
-// export default Header;
-
-
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // import '../assets/css/header.css'; // Adjust path if needed
@@ -30,7 +11,15 @@ const Header = () => {
   const toggleDropdown = (name) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
+const toggleProductDropdown = (menu) => {
+  // Keep Products main dropdown open
+  setActiveDropdown('products');
 
+  // Toggle only one submenu at a time
+  setProductDropdown(
+    productDropdown === menu ? null : menu
+  );
+};
   return (
     <header id="mainHeader" className="header">
       {/* Top Bar */}
@@ -234,49 +223,104 @@ const Header = () => {
             </div>
           </div>
 
+          
           {/* Mobile Products Dropdown */}
+           {/* Products */}
           <div className={`mobile-dropdown ${activeDropdown === 'products' ? 'active' : ''}`}>
+            
             <div className="mobile-toggle" onClick={() => toggleDropdown('products')}>
               <span><i className="fa-solid fa-cart-shopping me-2"></i>Products</span>
-              <i className={`fa-solid fa-chevron-${activeDropdown === 'products' ? 'up' : 'down'}`}></i>
+                  <i className={`fa-solid fa-chevron-${activeDropdown === 'products' ? 'up' : 'down'}`}></i>  
             </div>
 
-            <div className={`mobile-submenu ${activeDropdown === 'products' ? 'active' : ''}`}>
+            <div className={`mobile-submenu ${ activeDropdown === 'products' ? 'active' : '' }`}>
 
               {/* Software */}
-              <div className={`mobile-dropdown ${activeDropdown === 'software' ? 'active' : ''}`}>
-                <div className="mobile-toggle" onClick={() => toggleDropdown('software')}>
-                  Software
+              <div className="mobile-dropdown">
+                <div
+                  className="mobile-toggle"
+                  onClick={() => toggleProductDropdown('software')}
+                >
+                  <span>Software</span>
+
+                  <i
+                    className={`fa-solid fa-chevron-${
+                      productDropdown === 'software' ? 'up' : 'down'
+                    }`}
+                  ></i>
                 </div>
-                <div className={`mobile-submenu ${activeDropdown === 'software' ? 'active' : ''}`}>
-                  <Link to="/products/solis" onClick={toggleMenu}>Solis</Link>
-                  <Link to="/products/polarface" onClick={toggleMenu}>PolarFace</Link>
-                </div>
+
+                {productDropdown === 'software' && (
+                  <div className="mobile-submenu active">
+                    <Link to="/products/solis" onClick={toggleMenu}>
+                      Solis
+                    </Link>
+
+                    <Link to="/products/polarface" onClick={toggleMenu}>
+                      PolarFace
+                    </Link>
+                  </div>
+                )}
               </div>
 
+          {/* Hardware */}
+          <div className="mobile-dropdown">
+            <div
+              className="mobile-toggle"
+              onClick={() => toggleProductDropdown('hardware')}
+            >
+              <span>Hardware</span>
 
-              {/* Hardware */}
-              <div className={`mobile-dropdown ${activeDropdown === 'hardware' ? 'active' : ''}`}>
-                <div className="mobile-toggle" onClick={() => toggleDropdown('hardware')}>
-                  Hardware
-                </div>
-                <div className={`mobile-submenu ${activeDropdown === 'hardware' ? 'active' : ''}`}>
-                  <Link to="/products/cctv-p" onClick={toggleMenu}>CCTV</Link>
-                  <Link to="/products/biometric" onClick={toggleMenu}>Home/Building</Link>
-                  <Link to="/products/pa" onClick={toggleMenu}>Public Address</Link>
-                  <Link to="/products/fire-hydrantss" onClick={toggleMenu}>Fire Hydrant</Link>
-                  <Link to="/products/smoke-detectors" onClick={toggleMenu}>Fire Alarm</Link>
-                  <Link to="/products/access-control" onClick={toggleMenu}>Access Control</Link>
-                  <Link to="/products/network-switch" onClick={toggleMenu}>Network Products</Link>
-                  <Link to="/products/inter-com" onClick={toggleMenu}>Intercom System</Link>
-                  <Link to="/products/panel" onClick={toggleMenu}>Interactive Panels</Link>
-                </div>
-              </div>
-
-
-
+              <i
+                className={`fa-solid fa-chevron-${
+                  productDropdown === 'hardware' ? 'up' : 'down'
+                }`}
+              ></i>
             </div>
+
+            {productDropdown === 'hardware' && (
+              <div className="mobile-submenu active">
+                <Link to="/products/cctv-p" onClick={toggleMenu}>
+                  CCTV
+                </Link>
+
+                <Link to="/products/biometric" onClick={toggleMenu}>
+                  Home/Building
+                </Link>
+
+                <Link to="/products/pa" onClick={toggleMenu}>
+                  Public Address
+                </Link>
+
+                <Link to="/products/fire-hydrantss" onClick={toggleMenu}>
+                  Fire Hydrant
+                </Link>
+
+                <Link to="/products/smoke-detectors" onClick={toggleMenu}>
+                  Fire Alarm
+                </Link>
+
+                <Link to="/products/access-control" onClick={toggleMenu}>
+                  Access Control
+                </Link>
+
+                <Link to="/products/network-switch" onClick={toggleMenu}>
+                  Network Products
+                </Link>
+
+                <Link to="/products/inter-com" onClick={toggleMenu}>
+                  Intercom System
+                </Link>
+
+                <Link to="/products/panel" onClick={toggleMenu}>
+                  Interactive Panels
+                </Link>
+              </div>
+            )}
           </div>
+
+        </div>
+      </div>
 
            {/* buy re Products Dropdown */}
           {/* <div className={`mobile-dropdown ${activeDropdown === 'buy-refurbished-laptop' ? 'active' : ''}`}>

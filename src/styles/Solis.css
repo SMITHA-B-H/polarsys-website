@@ -25,8 +25,8 @@ body {
 /* HERO SECTION */
 .hero-section {
   height: 70vh;
-  background: linear-gradient(135deg, rgba(13,43,82,0.85), rgba(25,118,210,0.85)),
-              url('../assets/image/it1.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(191, 216, 248, 0.85), rgba(241, 243, 246, 0.85)),
+              url('../assets/image/wallaper.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
@@ -35,11 +35,19 @@ body {
 .hero-section h1 {
   font-size: 52px;
   font-weight: 800;
+  color: #053465;
 }
 
 .hero-section h4 {
   font-weight: 400;
   opacity: 0.9;
+  color: #0c3a6b;
+}
+
+.hero-section p {
+  font-weight: 400;
+  opacity: 0.9;
+  color: #125aa7;
 }
 
 .hero-section .btn {

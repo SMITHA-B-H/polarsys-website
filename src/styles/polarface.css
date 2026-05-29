@@ -1,7 +1,13 @@
 /* HERO */
 .pf-hero {
+  /* height: 70vh;
+  background: linear-gradient(135deg, #0d2b52, #1976d2); */
   height: 70vh;
-  background: linear-gradient(135deg, #0d2b52, #1976d2);
+  background: linear-gradient(135deg, rgba(13,43,82,0.85), rgba(25,118,210,0.85)),
+              url('../assets/image/it1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 /* Coming Soon Badge */

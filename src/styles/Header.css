@@ -14,7 +14,7 @@ body {
 }
 
 #root {
-    padding-top: 116px; /* Adjust for top-bar (36px) + header (80px) */
+    padding-top: 116px; 
 }
 
 /* =========================
@@ -85,7 +85,7 @@ body {
 ========================= */
 .header {
     position: fixed;
-    top: 36px; /* sits below top-bar */
+    top: 33px; /* sits below top-bar */
     left: 0;
     right: 0;
     width: 100%;
@@ -472,14 +472,17 @@ body {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
     height: 100vh;
-    background: #0b4ea2;
-    padding: 20px;
+   
+    width: 320px;
+    background: linear-gradient(180deg, #0b4ea2, #083a7a);
+    padding: 20px 0;
     transition: right 0.3s ease;
     z-index: 2600;
     overflow-y: auto;
 }
+
+   
 
 .mobile-menu.active {
     right: 0;
@@ -610,7 +613,7 @@ body {
 .back-to-top {
     bottom: 30px; 
     right: 30px;
-}
+} 
 
 /* Positioned exactly 60px above the back-to-top button */
 .whatsapp-float {
@@ -629,3 +632,5 @@ body {
         display: flex;
     }
 }
+
+

@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -73,7 +71,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/careers" element={<Careers />} />
-          {/* <Route path="/gallery" element={<GalleryPage/>}/> */}
+          <Route path="/gallery" element={<GalleryPage/>}/>
          
           
           {/* Example of nested service routes */}
